@@ -5,8 +5,9 @@
 <title>WebBusinessDesigners</title>
 
 <!--CSS file Links-->
+<link href="css/mobile.css" rel="stylesheet" type="text/css">
 
-<!--Javascript file Links-->
+
 
 
 </head>
@@ -14,8 +15,8 @@
 <body>
 
 <!--Fixed main navigation-->
-
-<nav class="main" id="main">
+<div id="main_container">
+<nav class="main_nav" id="main_nav">
 	<ul>
   		<li><a href=""></a>Services</li>
     	<li><a href=""></a>Portfolio</li>
@@ -23,9 +24,19 @@
     	<li><a href=""></a>Testimonials</li>
     	<li><a href=""></a>Contact Us</li>
 	</ul>
-</nav>
+</nav><!--end of nav-->
 
 <!--Image Slider-->
+<div id="image_slider_container">
+	<div class=”image-slider-wrapper”>
+  		<ul id=”image_slider”>
+       		<li><img src="Images/services.png"></li>
+       		<li><img src="Images/social_media_piktochart.png"></li>
+       		<li><img src="Images/robot_pet.png"></li>    	
+   		</ul> 
+	</div>
+</div><!--end of image_slider_container-->
+
 
 
 <!--Gallery Navigation-->
@@ -58,7 +69,12 @@
 <!--Contact Section-->
 	<!--Contact Form-->
     <!--Google Map-->
+    
+    
+    
+<!--Javascript file Links-->
+<script type="text/javascript" src="resources/mobile.js"></script>
 
-
+</div><!--end of div id="main_container"-->
 </body>
 </html>
