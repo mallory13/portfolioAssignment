@@ -34,3 +34,47 @@ footer{
 nav{
 
 }
+
+#price_ecommerce{
+}
+
+#price_business{
+	background-color:#72EAE8;
+}
+
+#price_wedding{
+}
+
+#price_social_media{
+	background-color:#72EAE8;
+}
+
+#about_social_media{
+}
+
+#portfolio{
+	background-color:#72EAE8;
+}
+
+#about_img{
+}
+
+#about{
+	background-color:#72EAE8;
+}
+
+#contact{
+}
+
+#parallax{
+	background-image: ;
+	height: 50vh;
+  	text-indent: -9999px;
+  	background-attachment: fixed;
+  	background-position: center center;
+  	background-size: cover;
+  	&:nth-child(2n) {
+    box-shadow: inset 0 0 1em #111;
+}
+
+
