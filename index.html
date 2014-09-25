@@ -34,20 +34,21 @@ Description: This is a website that provides web solution services
 
 
 <!--Fixed top main navigation-->
-<div class="row">
-	<nav class="small-6 columns end">
-    	<ul>
-  			<li><a href=""></a>Services</li>
-    		<li><a href=""></a>Portfolio</li>
-    		<li><a href=""></a>About</li>
-    		<li><a href=""></a>Testimonials</li>
-    		<li><a href=""></a>Contact Us</li>
-	</ul>
-	</nav><!--end of nav-->
+<div data-magellan-expedition="fixed">
+  <dl class="nav">
+    <dd data-magellan-arrival=""><a href="#home">Home</a></dd>
+    <dd data-magellan-arrival=""><a href="#services">Services</a></dd>
+    <dd data-magellan-arrival=""><a href="#portfolio">Portfolio</a></dd>
+    <dd data-magellan-arrival=""><a href="#about">About</a></dd>
+    <dd data-magellan-arrival=""><a href="#testimonials">Testimonials</a></dd>
+    <dd data-magellan-arrival=""><a href="#contact">Contact</a></dd>
+  </dl>
 </div>
 
 <!--Image Slider-->
 <!--Insert images/captions-->
+<a name="home"></a>
+<h3 data-magellan-destination="home">Home</h3>
 <div class="row">
 <div class="small-12 columns">
 <div data-orbit class="orbit-container" data-options="animation_speed:1500;">
@@ -119,8 +120,10 @@ Description: This is a website that provides web solution services
 
 
 <!--Services Section-->
+<a name="services"></a>
+<h3 data-magellan-destination="services">Services</h3>
 	<!--E-Commerce Websites Image and Description-->
-<div class="parallax">
+<div class="parallax" id="services">
 <div class="row" id="price_ecommerce">
 
 	<div class="small-3 columns">
@@ -244,6 +247,8 @@ Description: This is a website that provides web solution services
 
 
 <!--Portfolio Section-->
+<a name="portfolio"></a>
+<h3 data-magellan-destination="portfolio">Portfolio</h3>
 <div class="row" id="portfolio">
 	
 	<!--Wedding Image with link to wedding website-->
@@ -261,8 +266,10 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->
 
 <!--About Section-->
+<a name="about"></a>
+<h3 data-magellan-destination="about">About</h3>
 	<!--Image and Description for Mallory Steele-->
-<div class="row" id="about_img">
+<div class="row" id="about">
 	<div class="small-12 columns large-6 columns">
     	<img src=""/>
     </div>
@@ -274,7 +281,7 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->
 
 <div class="parallax">
-<div class="row" id="about">
+<div class="row" id="about_desc">
 	<div class="small-12 columns large-6 columns">
     <!--Desciption for Mallory Steele-->
     <h2>Mallory</h2>
@@ -311,6 +318,8 @@ Description: This is a website that provides web solution services
 
 
 <!--Testimonials Section-->
+<a name="testimonials"></a>
+<h3 data-magellan-destination="testimonials">Testimonials</h3>
 <!--Insert block grid?-->
 <div class="row">
 	<div class="small-12 columns">
@@ -332,7 +341,8 @@ Description: This is a website that provides web solution services
 
 
 <!--Contact Section-->
-
+<a name="contact"></a>
+<h3 data-magellan-destination="contact">Contact</h3>
 <div class="row" id="contact">
 	<div class="small-6 columns text-center">
 	<p>1993 River Rd West Wasaga Beach, On L9z 2W1
@@ -343,6 +353,7 @@ Description: This is a website that provides web solution services
 	<!--Contact Form-->
     <!--Google Map-->
     
+  <!--Social Media Icons-->
   
  <!--Footer Section-->
  <div class="row">
@@ -356,6 +367,7 @@ Description: This is a website that provides web solution services
 <!--Javascript file Links-->
 <script src="Scripts/vendor/jquery.js"></script>
 <script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.magellan.js"></script>
 <script src="js/foundation/foundation.orbit.js"></script>
 <script src="Scripts/foundation.min.js"></script>
 <!--Activate Foundation-->
