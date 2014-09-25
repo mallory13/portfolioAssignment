@@ -1,2 +1,36 @@
 /* CSS Document */
+body{
+	font-size: 20px;
+	color: #898989;
+	background-image:url(../Images/190681_774715962056_5697334_n.jpg);
+	background-position:top;
+	background-size: 100%;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+		
+}
 
+img{
+	height: 100px;
+	width: 100px;	
+}
+
+h1{
+	
+}
+
+h2{
+	
+}
+
+header{
+	
+}
+
+footer{
+	
+}
+
+nav{
+
+}

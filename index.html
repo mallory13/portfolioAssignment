@@ -22,7 +22,7 @@ Description: This is a website that provides web solution services
 <body>
 <!--Header Section-->
 <div class="row">
-	<Header class="small-12 columns text-left">
+	<Header class="small-6 columns text-left">
     	<h1><img src="Images/logo.png" alt="webbusinessdesigners.com logo"
         	WebBusinessDesigners
         </h1>
@@ -47,20 +47,61 @@ Description: This is a website that provides web solution services
 </div>
 
 <!--Image Slider-->
+<!--Insert images/captions-->
 <div class="row">
-	<div id="image_slider_container">
-		<div class=”image-slider-wrapper”>
-  			<ul id=”image_slider”>
-       			<li><img src="Images/services.png"></li>
-       			<li><img src="Images/social_media_piktochart.png"></li>
-       			<li><img src="Images/robot_pet.png"></li>    	
-   			</ul> 
-		</div>
-	</div><!--end of image_slider_container-->
+<div class="small-12 columns">
+<div data-orbit class="orbit-container" data-options="animation_speed:1500;">
+  <ul data-orbit class="example-orbit orbit-slides-container">
+    <li>
+      <img src="" alt="slide 1" />
+      <div class="orbit-caption">
+        Caption One.
+      </div>
+    </li>
+    <li class="active">
+      <img src="" alt="slide 1" />
+      <div class="orbit-caption">
+        Caption Two.
+      </div>
+    </li>
+    <li>
+      <img src="" alt="slide 1" />
+      <div class="orbit-caption">
+        Caption Three.
+      </div>
+    </li>
+  </ul>
+
+
+
+  <!-- Navigation Arrows -->
+  <a href="#" class="orbit-prev">Prev <span></span></a>
+  <a href="#" class="orbit-next">Next <span></span></a>
+
+  <!-- Slide Numbers -->
+  <div class="orbit-slide-number">
+    <span>1</span> of <span>3</span>
+  </div>
+
+  <!-- Timer and Play/Pause Button -->
+  <div class="orbit-timer">
+    <span></span>
+    <div class="orbit-progress"></div>
+  </div>
 </div>
+
+<!-- Bullets -->
+<ol class="orbit-bullets">
+  <li data-orbit-slide-number="1"></li>
+  <li data-orbit-slide-number="2" class="active"></li>
+  <li data-orbit-slide-number="3"></li>
+</ol>
+</div>
+</div><!--end of image slider row-->
 
 
 <!--Gallery Navigation-->
+<!--Insert block grid-->
 <div class="row">
 	<div class="small-4 columns">
 	<a href=""><img src="Images/services.png"/>Services</a>
@@ -90,7 +131,7 @@ Description: This is a website that provides web solution services
 
 <!--Services Section-->
 	<!--E-Commerce Websites Image and Description-->
-<div class="row">
+<div class="row" id="price_ecommerce">
 
 	<div class="small-3 columns">
 	<img src="Images/backwoods_website.png"/>
@@ -119,7 +160,7 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->       
 
 	<!--Business Websites Image and Description-->
-<div class="row">
+<div class="row" id="price_business">
 
 	<div class="small-9 columns">
     <h2>Business Website: $2400</h2>
@@ -143,7 +184,7 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->
 
 	<!--Wedding Websites Image and Description-->
-<div class="row">
+<div class="row" id="price_wedding">
 	<div class="small-3 columns">
     	<img src=""/>
     </div>
@@ -161,7 +202,7 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->
 
 	<!--Social Media Optimization Image and Description-->
-<div class="row">
+<div class="row" id="price_social_media">
 	<div class="small-9 columns">
     <h2>Social Media Optimization:</h2> <p>$3000/year (Monthly payment plan available)</p>
 	<p>Take your business to the next level and stay ahead<br /> 
@@ -180,7 +221,7 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->
 
 
-<div class="row">
+<div class="row" id="about_social_media">
 	<div class="small-6 columns">     
 	<h3>This is how it works:</h3>
     <ul>
@@ -210,7 +251,7 @@ Description: This is a website that provides web solution services
 
 
 <!--Portfolio Section-->
-<div class="row">
+<div class="row" id="portfolio">
 	
 	<!--Wedding Image with link to wedding website-->
     <div class="small-4 columns">
@@ -228,7 +269,7 @@ Description: This is a website that provides web solution services
 
 <!--About Section-->
 	<!--Image and Description for Mallory Steele-->
-<div class="row">
+<div class="row" id="about_img">
 	<div class="small-12 columns large-6 columns">
     	<img src=""/>
     </div>
@@ -239,7 +280,7 @@ Description: This is a website that provides web solution services
 
 </div><!--end of row-->
 
-<div class="row">
+<div class="row" id="about">
 	<div class="small-12 columns large-6 columns">
     <!--Desciption for Mallory Steele-->
     <h2>Mallory</h2>
@@ -275,6 +316,7 @@ Description: This is a website that provides web solution services
 
 
 <!--Testimonials Section-->
+<!--Insert block grid?-->
 <div class="row">
 	<div class="small-12 columns">
     	<!--Insert testimonial here-->
@@ -295,7 +337,8 @@ Description: This is a website that provides web solution services
 
 
 <!--Contact Section-->
-<div class="row">
+
+<div class="row" id="contact">
 	<div class="small-6 columns text-center">
 	<p>1993 River Rd West Wasaga Beach, On L9z 2W1
     705-220-1807
@@ -317,7 +360,10 @@ Description: This is a website that provides web solution services
 
 <!--Javascript file Links-->
 <script src="Scripts/vendor/jquery.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.orbit.js"></script>
 <script src="Scripts/foundation.min.js"></script>
+<!--Activate Foundation-->
 <script>$(document).foundation();</script>
 <script src="Scripts/main.js"></script>
 
