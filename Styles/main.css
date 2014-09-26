@@ -2,13 +2,19 @@
 body{
 	font-size: 20px;
 	color: #898989;
-	background-image:url(../Images/190681_774715962056_5697334_n.jpg);
+	background: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1)), url('../Images/190681_774715962056_5697334_n.jpg');
+	background: -moz-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1)), url('../Images/190681_774715962056_5697334_n.jpg');
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1)), url('../Images/190681_774715962056_5697334_n.jpg');
 	background-position:top;
 	background-size: 100%;
 	background-attachment:fixed;
 	background-repeat:no-repeat;
+	
+	
 		
 }
+
+
 
 img{
 	height: 100px;
@@ -23,7 +29,14 @@ h2{
 	
 }
 
+h3{
+	text-align:center;
+	font-weight:bold;
+	font-size:3em;
+}
+
 header{
+	width: 100%;
 	
 }
 
@@ -40,6 +53,7 @@ nav{
 
 #price_business{
 	background-color:#72EAE8;
+	background-size:cover;
 }
 
 #price_wedding{
@@ -47,6 +61,7 @@ nav{
 
 #price_social_media{
 	background-color:#72EAE8;
+	background-size:cover;
 }
 
 #about_social_media{
@@ -54,6 +69,7 @@ nav{
 
 #portfolio{
 	background-color:#72EAE8;
+	background-size:cover;
 }
 
 #about{
@@ -61,14 +77,16 @@ nav{
 
 #about_desc{
 	background-color:#72EAE8;
+	background-size:cover;
 }
 
 #contact{
+	text-align:center;
 }
 
 #parallax{
 	background-image: ;
-	height: 50vh;
+	
   	text-indent: -9999px;
   	background-attachment: fixed;
   	background-position: center center;
