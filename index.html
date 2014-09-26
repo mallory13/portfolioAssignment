@@ -17,6 +17,17 @@ Description: This is a website that provides web solution services
 <link rel="stylesheet" type="text/css" href="Styles/foundation.min.css">
 <link rel="stylesheet" type="text/css" href="Styles/main.css">
 
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55156430-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 </head>
 
 <body>
@@ -246,24 +257,23 @@ Description: This is a website that provides web solution services
 </div><!--end of row-->
 
 
+
+
 <!--Portfolio Section-->
 <a name="portfolio"></a>
 <h3 data-magellan-destination="portfolio">Portfolio</h3>
 <div class="row" id="portfolio">
-	
-	<!--Wedding Image with link to wedding website-->
-    <div class="small-4 columns">
-    <a href=""><img src="Images/wedding_website.jpg"/></a>
-    </div>
-	<!--Business Image with link to Business website-->
-    <div class="small-4 columns">
-    <a href=""><img src="Images/portfolio.jpg"/></a>
-    </div>
-	<!--E-commerce image with link to E-commerce website-->
-    <div class="small-4 columns">
-    <a href=""><img src="Images/backwoods_website.png"/></a>
-    </div>
+    <ul class="small-block-grid-3">
+    	<!--Wedding Image with link to wedding website-->
+    	<li><a href=""><img src="Images/wedding_website.jpg"/></a></li>
+		<!--Business Image with link to Business website-->
+    	<li><a href=""><img src="Images/portfolio.jpg"/></a></li>
+		<!--E-commerce image with link to E-commerce website-->
+    	<li><a href=""><img src="Images/backwoods_website.png"/></a></li>
+    </ul>
 </div><!--end of row-->
+
+
 
 <!--About Section-->
 <a name="about"></a>
@@ -322,22 +332,14 @@ Description: This is a website that provides web solution services
 <h3 data-magellan-destination="testimonials">Testimonials</h3>
 <!--Insert block grid?-->
 <div class="row">
-	<div class="small-12 columns">
-    	<!--Insert testimonial here-->
-    </div>
+	<ul class="small-block-grid-1">
+    	<li><!--insert testimonial here--></li>
+        <li><!--insert testimonial here--></li>
+        <li><!--insert testimonial here--></li>
+  	</ul>
 </div>
 
-<div class="row">
-	<div class="small-12 columns">
-    	<!--Insert testimonial here-->
-    </div>
-</div>
 
-<div class="row">
-	<div class="small-12 columns">
-    	<!--Insert testimonial here-->
-    </div>
-</div>
 
 
 <!--Contact Section-->
@@ -349,11 +351,14 @@ Description: This is a website that provides web solution services
     705-220-1807
     m.steele@webbusinessdesigners.com</p>
     </div>
+    <div id="map_canvas">
+    </div>
 </div>
 	<!--Contact Form-->
     <!--Google Map-->
     
   <!--Social Media Icons-->
+  
   
  <!--Footer Section-->
  <div class="row">
@@ -372,6 +377,7 @@ Description: This is a website that provides web solution services
 <script src="Scripts/foundation.min.js"></script>
 <!--Activate Foundation-->
 <script>$(document).foundation();</script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="Scripts/main.js"></script>
 
 </div><!--end of div id="main_container"-->
