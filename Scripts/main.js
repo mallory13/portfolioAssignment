@@ -1,48 +1,82 @@
-// JavaScript Document
-$(document).foundation({
-  orbit: {
-      animation: 'slide', // Sets the type of animation used for transitioning between slides, can also be 'fade'
-      timer_speed: 10000, // Sets the amount of time in milliseconds before transitioning a slide
-      pause_on_hover: true, // Pauses on the current slide while hovering
-      resume_on_mouseout: false, // If pause on hover is set to true, this setting resumes playback after mousing out of slide
-      next_on_click: true, // Advance to next slide on click
-      animation_speed: 500, // Sets the amount of time in milliseconds the transition between slides will last
-      stack_on_small: false,
-      navigation_arrows: true,
-      slide_number: true,
-      slide_number_text: 'of',
-      container_class: 'orbit-container',
-      stack_on_small_class: 'orbit-stack-on-small',
-      next_class: 'orbit-next', // Class name given to the next button
-      prev_class: 'orbit-prev', // Class name given to the previous button
-      timer_container_class: 'orbit-timer', // Class name given to the timer
-      timer_paused_class: 'paused', // Class name given to the paused button
-      timer_progress_class: 'orbit-progress', // Class name given to the progress bar
-      slides_container_class: 'orbit-slides-container', // Class name given to the slide container
-      preloader_class: 'preloader', // Class given to the perloader
-      slide_selector: 'li', // Default is '*' which selects all children under the container
-      bullets_container_class: 'orbit-bullets',
-      bullets_active_class: 'active', // Class name given to the active bullet
-      slide_number_class: 'orbit-slide-number', // Class name given to the slide number
-      caption_class: 'orbit-caption', // Class name given to the caption
-      active_slide_class: 'active', // Class name given to the active slide
-      orbit_transition_class: 'orbit-transitioning',
-      bullets: true, // Does the slider have bullets visible?
-      circular: true, // Does the slider should go to the first slide after showing the last?
-      timer: true, // Does the slider have a timer active? Setting to false disables the timer.
-      variable_height: false, // Does the slider have variable height content?
-      swipe: true,
-      before_slide_change: noop, // Execute a function before the slide changes
-      after_slide_change: noop // Execute a function after the slide changes
-  }
-});
+//1. set ul width 
+//2. image when click prev/next button
+var ul;
+var li_items;
+var imageNumber;
+var imageWidth;
+var prev, next;
+var currentPostion = 0;
+var currentImage = 0;
 
-function initialize() {
-    var mapCanvas = document.getElementById('map_canvas');
-    var mapOptions = {
-      center: new google.maps.LatLng(44.5403, -78.5463),
-      zoom: 8,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-  }
+
+function init(){
+	ul = document.getElementById('image_slider');
+	li_items = ul.children;
+	imageNumber = li_items.length;
+	imageWidth = li_items[0].children[0].clientWidth;
+	ul.style.width = parseInt(imageWidth * imageNumber) + 'px';
+	prev = document.getElementById("prev");
+	next = document.getElementById("next");
+	//.onclike = slide(-1) will be fired when onload;
+	/*
+	prev.onclick = function(){slide(-1);};
+	next.onclick = function(){slide(1);};*/
+	prev.onclick = function(){ onClickPrev();};
+	next.onclick = function(){ onClickNext();};
+}
+
+function animate(opts){
+	var start = new Date;
+	var id = setInterval(function(){
+		var timePassed = new Date - start;
+		var progress = timePassed / opts.duration;
+		if (progress > 1){
+			progress = 1;
+		}
+		var delta = opts.delta(progress);
+		opts.step(delta);
+		if (progress == 1){
+			clearInterval(id);
+			opts.callback();
+		}
+	}, opts.delay || 17);
+	//return id;
+}
+
+function slideTo(imageToGo){
+	var direction;
+	var numOfImageToGo = Math.abs(imageToGo - currentImage);
+	// slide toward left
+
+	direction = currentImage > imageToGo ? 1 : -1;
+	currentPostion = -1 * currentImage * imageWidth;
+	var opts = {
+		duration:1000,
+		delta:function(p){return p;},
+		step:function(delta){
+			ul.style.left = parseInt(currentPostion + direction * delta * imageWidth * numOfImageToGo) + 'px';
+		},
+		callback:function(){currentImage = imageToGo;}	
+	};
+	animate(opts);
+}
+
+function onClickPrev(){
+	if (currentImage == 0){
+		slideTo(imageNumber - 1);
+	} 		
+	else{
+		slideTo(currentImage - 1);
+	}		
+}
+
+function onClickNext(){
+	if (currentImage == imageNumber - 1){
+		slideTo(0);
+	}		
+	else{
+		slideTo(currentImage + 1);
+	}		
+}
+
+window.onload = init;

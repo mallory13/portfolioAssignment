@@ -1,21 +1,26 @@
 <!--
 Author: Mallory Steele 100043786
+
 Website: webbusinessdesigners.com
+
 Description: This is a website that provides web solution services 
-(develops websites and promotes business through social media marketing). It has 1 page with 
- id link navigation.
+(develops websites and promotes business through social media marketing) as well as shows a 
+portfolio of previous work. It has 1 page with 
+ navigation within the page.
 -->
 
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WebBusinessDesigners</title>
 
 <!--CSS file Links-->
 <link rel="stylesheet" type="text/css" href="Styles/reset.css">
 <link rel="stylesheet" type="text/css" href="Styles/foundation.min.css">
 <link rel="stylesheet" type="text/css" href="Styles/main.css">
+<link href="js-image-slider.css" rel="stylesheet" type="text/css" />
 
 <!--Google Analytics-->
 <script>
@@ -27,32 +32,36 @@ Description: This is a website that provides web solution services
   ga('create', 'UA-55156430-1', 'auto');
   ga('send', 'pageview');
 </script>
-
 </head>
+
+
 
 <body>
 <!--Header Section-->
-<div id="logo">
 <div class="row">
-	<Header class="small-6 columns text-left">
-    	<h1><img src="Images/logo.png" alt="webbusinessdesigners.com logo"/>
-        	WebBusinessDesigners
-        </h1>
+	<Header class="small-9 columns small-text-left">
+    	<img src="Images/logo4.png" height="5" width="10"/>
+        <h1 class="small-3 columns small-text-right">Affordable web solutions for your small business</h1>
     </Header>
 </div>
-</div>
+
+
 <!--Social Media Icons-->
 
 
 
 
 <!--Fixed top main navigation-->
-<div class="sticky">
-<div class="row">
-<div class="small-9 columns push-3">
+
+<div class="fixed">
 <div class="contain-to-grid sticky">
   <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
-  	<ul>
+  	<ul class="title_area">
+    	<li class="name"><a href="#home"><img src="Images/logo4.png"></a></li>
+        <li class="toggle-topbar menu-icon"><a href="#home">Menu</a></li>
+    </ul>
+   <section class="top-bar-section">
+    <ul class="right">
     	<li><a href="#home">Home</a></li>
     	<li><a href="#services">Services</a></li>
     	<li><a href="#portfolio">Portfolio</a></li>
@@ -60,14 +69,39 @@ Description: This is a website that provides web solution services
    		<li><a href="#testimonials">Testimonials</a></li>
     	<li><a href="#contact">Contact</a></li>
   	</ul>
+    </section>
   </nav>
 </div>
 </div>
-</div>
-</div>
+
+
+
 
 <!--Image Slider-->
-
+<div class="container" id="home" >
+<ul class="example-orbit" data-orbit data-options="animation_speed:500; timer_speed: 4000; 
+pause_on_hover:ture; resume_on_mouseout:true; slide_number:false; bullets:false; animation: 'slide'; 
+navigation_arrows: true;">
+  <li>
+    <img src="Images/188396_774714030926_2395390_n.jpg" alt="slide 1" />
+    <div class="orbit-caption">
+      Affordable web solutions for small local business
+    </div>
+  </li>
+  <li class="active">
+    <img src="Images/188303_774718072826_2291686_n.jpg" alt="slide 2" />
+    <div class="orbit-caption">
+      Optimize your Social Media!
+    </div>
+  </li>
+  <li>
+    <img src="Images/190002_774733696516_8102681_n.jpg" alt="slide 3" />
+    <div class="orbit-caption">
+      Stay ahead of the competition.
+    </div>
+  </li>
+</ul>
+</div>
 
 
 
@@ -77,12 +111,12 @@ Description: This is a website that provides web solution services
 <div id="sub_nav">
 <div class="row">
 	<ul class="small-block-grid-2 medium-block-grid-3">
-  		<li><a href="#services"><img src="Images/services.png"/>Services</a></li>
-  		<li><a href="#portfolio"><img src="Images/portfolio.jpg"/>Portfolio</a></li>
-  		<li><a href="#about"><img src="Images/about.jpg"/>About</a></li>
-  		<li><a href="#testimonials"><img src="Images/social_media.jpg"/>Testimonials</a></li>
-  		<li><a href="#blog"><img src="Images/blog.jpg"/>Blog</a></li>
-  		<li><a href="#contact"><img src="Images/robot_pet.png"/>Contact</a></li>
+  		<li><a href="#services"><img src="Images/services.png"/><br /><h5>Services</h5></a></li>
+  		<li><a href="#portfolio"><img src="Images/portfolio.jpg"/><br /><h5>Portfolio</h5></a></li>
+  		<li><a href="#about"><img src="Images/about.jpg"/><br /><h5>About</h5></a></li>
+  		<li><a href="#testimonials"><img src="Images/social_media.jpg"/><br /><h5>Testimonials</h5></a></li>
+  		<li><a href="#blog"><img src="Images/blog.jpg"/><br /><h5>Blog</h5></a></li>
+  		<li><a href="#contact"><img src="Images/robot_pet.png"/><br /><h5>Contact</h5></a></li>
 	</ul>
 </div><!--end of row-->
 </div><!--end of sub_nav-->
@@ -94,38 +128,37 @@ Description: This is a website that provides web solution services
 <!--Services Section-->
 
 	<!--E-Commerce Websites Image and Description-->
-<a name="services">Services</a>
 <div class="parallax" id="services">
+<h3><a name="services">Services</a></h3>
 <div class="row" id="price_ecommerce">
-
 	<div class="small-3 columns" id="backwoods">
 	<img src="Images/backwoods_website.png"/>
     </div>
-    
     <div class="small-9 columns">
-    <h2>E-commerce Website: $3600</h2>
-	<ul>
-		<li>Hosting (1 Year)</li>
-		<li>Domain (1 Year)</li>
-		<li>Wordpress theme and installation</li>
-		<li>Up to 10 pages</li>
-		<li>Up to 200 products</li>
-		<li>Product Variations</li>
-		<li>Shopping Cart</li>
-		<li>Check Out Set Up (PayPal)</li>
-		<li>Shipping Set Up</li>
-		<li>Initial SEO set up</li>
-		<li>Google Analytics Integration</li>
-		<li>Modern Responsive Design</li>
-		<li>Matching Business Card Template Design</li>
-		<li>Business Logo</li>
-		<li>Business email</li>
- 	</ul>
+    	<h2>E-commerce Website: $3600</h2>
+		<ul>
+			<li>Hosting (1 Year)</li>
+			<li>Domain (1 Year)</li>
+			<li>Wordpress theme and installation</li>
+			<li>Up to 10 pages</li>
+			<li>Up to 200 products</li>
+			<li>Product Variations</li>
+			<li>Shopping Cart</li>
+			<li>Check Out Set Up (PayPal)</li>
+			<li>Shipping Set Up</li>
+			<li>Initial SEO set up</li>
+			<li>Google Analytics Integration</li>
+			<li>Modern Responsive Design</li>
+			<li>Matching Business Card Template Design</li>
+			<li>Business Logo</li>
+			<li>Business email</li>
+ 		</ul>
     </div>
 </div><!--end of row--> 
 </div>      
 
 	<!--Business Websites Image and Description-->
+<div class="not_parallax">
 <div class="row" id="price_business">
 
 	<div class="small-9 columns">
@@ -142,6 +175,7 @@ Description: This is a website that provides web solution services
 		<li>Business Logo</li>
 		<li>Business email</li>
   	</ul>
+    </div>
     </div>
     
     <div class="small-3 columns">
@@ -173,7 +207,7 @@ Description: This is a website that provides web solution services
 
 <div class="row" id="price_social_media">
 	<div class="small-9 columns">
-    <h2>Social Media Optimization:</h2> <p>$3000/year (Monthly payment plan available)</p>
+    <h2>Social Media Optimization: <p>$3000/year (Monthly payment plan available)</p></h2>
 	<p>Take your business to the next level and stay ahead<br /> 
 	of your competition. Today it is not enough to just<br /> 
 	invest in traditional advertising.<br />
@@ -189,8 +223,8 @@ Description: This is a website that provides web solution services
     </div>
 </div><!--end of row-->
 
-
-<a name="about_social_media">What is Social Media?</a>
+<div class="parallax">
+<h3><a name="about_social_media">What is Social Media?</a></h3>
 <div class="row" id="about_social_media">
 	<div class="small-6 columns">     
 	<h3>This is how it works:</h3>
@@ -202,6 +236,7 @@ Description: This is a website that provides web solution services
 		<li>We send you analytics for your accounts on a monthly basis</li>
     </ul>
     </div>
+</div>
 
 	<div class="small-6 columns">
 	<h3>Why would you want Social Media Optimization for your Business?</h3>
@@ -223,22 +258,25 @@ Description: This is a website that provides web solution services
 
 
 <!--Portfolio Section-->
-<a name="portfolio">Portfolio</a>
+<div class="not_parallax">
+<h3><a name="portfolio">Portfolio</a></h3>
 <div class="row" id="portfolio">
-    <ul class="small-block-grid-3">
+    <ul class="medium-block-grid-3 small-block-grid-1">
     	<!--Wedding Image with link to wedding website-->
-    	<li><a href=""><img src="Images/wedding_website.jpg"/></a></li>
+    	<li><a href=""><img src="Images/wedding_website.jpg"/><br /><h5>Wedding Website</h5></a></li>
 		<!--Business Image with link to Business website-->
-    	<li><a href=""><img src="Images/portfolio.jpg"/></a></li>
+    	<li><a href="http://www.makeupbyjess.ca/" target=_blank><img src="Images/portfolio.jpg"/><br /><h5>Makeup By Jess</h5></a></li>
 		<!--E-commerce image with link to E-commerce website-->
-    	<li><a href=""><img src="Images/backwoods_website.png"/></a></li>
+    	<li><a href="http://www.backwoodsrods.ca/" target=_blank><img src="Images/backwoods_website.png"/><br /><h5>Backwoods Rods</h5></a></li>
     </ul>
 </div><!--end of row-->
+</div>
 
 
 
 <!--About Section-->
-<a name="about">About</a>
+<div class="parallax">
+<h3><a name="about">About</a></h3>
 	<!--Image and Description for Mallory Steele-->
 <div class="row" id="about">
 	<div class="small-12 columns large-6 columns">
@@ -251,7 +289,7 @@ Description: This is a website that provides web solution services
 
 </div><!--end of row-->
 
-<div class="parallax">
+
 <div class="row" id="about_desc">
 	<div class="small-12 columns large-6 columns">
     <!--Desciption for Mallory Steele-->
@@ -289,29 +327,36 @@ Description: This is a website that provides web solution services
 
 
 <!--Testimonials Section-->
-<a name="testimonials">Testimonials</a>
+<div class="not_parallax">
+<h3><a name="testimonials">Testimonials</a></h3>
 <!--Insert block grid?-->
 <div class="row">
 	<ul class="small-block-grid-1">
-    	<li><!--insert testimonial here--></li>
-        <li><!--insert testimonial here--></li>
-        <li><!--insert testimonial here--></li>
+    	<li><q><i>"Professional and efficient. A beautiful modern web design for my business"</i></q><br />-Jess McLaughlin</li><br />
+        <li><q><i>"WebBusinessDesigners helped me kick start my business when they took over the management of my social media accounts. 
+        Their engaging way of interacting has boosted my fan base immensely!"</i></q><br />-Matt Sturges</li><br />
+        <li><q><i>"My wedding website turned out exactly how I wanted it. It made it so much easier to keep track of my 
+        invitations, RVSP, and registry, plus  got to post my engagement pics and destination resort pics
+        for my family and friends to see. It helped me stay organized during one of the most stressful and amazing times of my life."
+         </i></q><br />-Patti Shibley</li><br />
   	</ul>
+</div>
 </div>
 
 
 
 
 <!--Contact Section-->
-<a name="contact">Contact</a>
+<div class="not_parallax">
+<h3><a name="contact">Contact</a></h3>
 <div class="row" id="contact">
 	<div class="small-6 columns text-center">
 	<p>1993 River Rd West Wasaga Beach, On L9z 2W1
     705-220-1807
     m.steele@webbusinessdesigners.com</p>
     </div>
-    <div id="map_canvas">
-    </div>
+    
+</div>
 </div>
 	<!--Contact Form-->
     <!--Google Map-->
@@ -329,10 +374,12 @@ Description: This is a website that provides web solution services
   
 
 <!--Javascript file Links-->
+
 <script src="Scripts/vendor/jquery.js"></script>
-<script src="js/foundation/foundation.js"></script>
-<script src="js/foundation/foundation.magellan.js"></script>
-<script src="js/foundation/foundation.orbit.js"></script>
+<script src="Scripts/foundation/foundation.js"></script>
+ <script src="Scripts/foundation/foundation.topbar.js"></script>
+<script src="Scripts/foundation/foundation.magellan.js"></script>
+<script src="Scripts/foundation/foundation.orbit.js"></script>
 <script src="Scripts/foundation.min.js"></script>
 <!--Activate Foundation-->
 <script>$(document).foundation();</script>
