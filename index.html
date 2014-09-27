@@ -43,107 +43,61 @@ Description: This is a website that provides web solution services
 </div>
 <!--Social Media Icons-->
 
-<!--Google Analytics-->
+
 
 
 <!--Fixed top main navigation-->
+<div class="sticky">
 <div class="row">
-<div class="small-12 columns">
-<div data-magellan-expedition="fixed">
-  <dl class="nav">
-    <dd data-magellan-arrival=""><a href="#home">Home</a></dd>
-    <dd data-magellan-arrival=""><a href="#services">Services</a></dd>
-    <dd data-magellan-arrival=""><a href="#portfolio">Portfolio</a></dd>
-    <dd data-magellan-arrival=""><a href="#about">About</a></dd>
-    <dd data-magellan-arrival=""><a href="#testimonials">Testimonials</a></dd>
-    <dd data-magellan-arrival=""><a href="#contact">Contact</a></dd>
-  </dl>
+<div class="small-9 columns push-3">
+<div class="contain-to-grid sticky">
+  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+  	<ul>
+    	<li><a href="#home">Home</a></li>
+    	<li><a href="#services">Services</a></li>
+    	<li><a href="#portfolio">Portfolio</a></li>
+    	<li><a href="#about">About</a></li>
+   		<li><a href="#testimonials">Testimonials</a></li>
+    	<li><a href="#contact">Contact</a></li>
+  	</ul>
+  </nav>
+</div>
 </div>
 </div>
 </div>
 
 <!--Image Slider-->
-<!--Insert images/captions-->
-<a name="home"></a>
-<h3 data-magellan-destination="home">Home</h3>
-<div class="row">
-<div class="small-12 columns">
-<div data-orbit class="orbit-container" data-options="animation_speed:1500;">
-  <ul data-orbit class="example-orbit orbit-slides-container">
-    <li>
-      <img src="Images/social_media_piktochart.png" alt="Social Media Optimization" />
-      <div class="orbit-caption">
-        Social Media Optimization
-      </div>
-    </li>
-    <li class="active">
-      <img src="Images/services.png" alt="Web Solutions" />
-      <div class="orbit-caption">
-        Affordable web solutions for small businesses.
-      </div>
-    </li>
-    <li>
-      <img src="Images/robot_pet.png" alt="slide 1" />
-      <div class="orbit-caption">
-        Uniques designs just for you.
-      </div>
-    </li>
-  </ul>
 
 
 
-  <!-- Navigation Arrows -->
-  <a href="#" class="orbit-prev">Prev <span></span></a>
-  <a href="#" class="orbit-next">Next <span></span></a>
-
-  <!-- Slide Numbers -->
-  <div class="orbit-slide-number">
-    <span>1</span> of <span>3</span>
-  </div>
-
-  <!-- Timer and Play/Pause Button -->
-  <div class="orbit-timer">
-    <span></span>
-    <div class="orbit-progress"></div>
-  </div>
-</div>
-
-<!-- Bullets -->
-<ol class="orbit-bullets">
-  <li data-orbit-slide-number="1"></li>
-  <li data-orbit-slide-number="2" class="active"></li>
-  <li data-orbit-slide-number="3"></li>
-</ol>
-</div>
-</div><!--end of image slider row-->
 
 
 <!--Gallery Navigation-->
-<!--Insert block grid-->
+<div id="not_parallax">
 <div id="sub_nav">
 <div class="row">
 	<ul class="small-block-grid-2 medium-block-grid-3">
-  		<li><a href=""><img src="Images/services.png"/>Services</a></li>
-  		<li><a href=""><img src="Images/portfolio.jpg"/>Portfolio</a></li>
-  		<li><a href=""><img src="Images/about.jpg"/>About</a></li>
-  		<li><a href=""><img src="Images/social_media.jpg"/>Testimonials</a></li>
-  		<li><a href=""><img src="Images/blog.jpg"/>Blog</a></li>
-  		<li><a href=""><img src="Images/robot_pet.png"/>Contact</a></li>
+  		<li><a href="#services"><img src="Images/services.png"/>Services</a></li>
+  		<li><a href="#portfolio"><img src="Images/portfolio.jpg"/>Portfolio</a></li>
+  		<li><a href="#about"><img src="Images/about.jpg"/>About</a></li>
+  		<li><a href="#testimonials"><img src="Images/social_media.jpg"/>Testimonials</a></li>
+  		<li><a href="#blog"><img src="Images/blog.jpg"/>Blog</a></li>
+  		<li><a href="#contact"><img src="Images/robot_pet.png"/>Contact</a></li>
 	</ul>
 </div><!--end of row-->
 </div><!--end of sub_nav-->
+</div>
 
 
 
 
 <!--Services Section-->
-<a name="services"></a>
-<h3 data-magellan-destination="services">Services</h3>
+
 	<!--E-Commerce Websites Image and Description-->
 <div class="parallax" id="services">
 <div class="row" id="price_ecommerce">
 
-	<div class="small-3 columns">
+	<div class="small-3 columns" id="backwoods">
 	<img src="Images/backwoods_website.png"/>
     </div>
     
@@ -190,15 +144,15 @@ Description: This is a website that provides web solution services
     </div>
     
     <div class="small-3 columns">
-    	<img src=""/>
+    	<img src="Images/makeup_jess2.png"/>
     </div>
 </div><!--end of row-->
 
 	<!--Wedding Websites Image and Description-->
 <div class="parallax">
 <div class="row" id="price_wedding">
-	<div class="small-3 columns">
-    	<img src=""/>
+	<div class="small-3 columns" id="wedding_image">
+    	<img src="Images/wedding_link.jpg"/>
     </div>
     
 	<div class="small-9 columns">
@@ -229,7 +183,7 @@ Description: This is a website that provides web solution services
     </div>
     
     <div class="small-3 columns">
-    	<img src=""/>
+    	<img src="Images/3141182898_47f209477e.jpg"/>
     </div>
 </div><!--end of row-->
 
@@ -266,8 +220,7 @@ Description: This is a website that provides web solution services
 
 
 <!--Portfolio Section-->
-<a name="portfolio"></a>
-<h3 data-magellan-destination="portfolio">Portfolio</h3>
+
 <div class="row" id="portfolio">
     <ul class="small-block-grid-3">
     	<!--Wedding Image with link to wedding website-->
@@ -282,16 +235,15 @@ Description: This is a website that provides web solution services
 
 
 <!--About Section-->
-<a name="about"></a>
-<h3 data-magellan-destination="about">About</h3>
+<h3>About</h3>
 	<!--Image and Description for Mallory Steele-->
 <div class="row" id="about">
 	<div class="small-12 columns large-6 columns">
-    	<img src=""/>
+    	<img src="Images/mallory_about.png"/>
     </div>
     
     <div class="small-12 columns large-6 columns">
-    	<img src=""/>
+    	<img src="Images/heather.png"/>
     </div>
 
 </div><!--end of row-->
@@ -334,8 +286,7 @@ Description: This is a website that provides web solution services
 
 
 <!--Testimonials Section-->
-<a name="testimonials"></a>
-<h3 data-magellan-destination="testimonials">Testimonials</h3>
+<h3>Testimonials</h3>
 <!--Insert block grid?-->
 <div class="row">
 	<ul class="small-block-grid-1">
@@ -349,8 +300,7 @@ Description: This is a website that provides web solution services
 
 
 <!--Contact Section-->
-<a name="contact"></a>
-<h3 data-magellan-destination="contact">Contact</h3>
+<h3>Contact</h3>
 <div class="row" id="contact">
 	<div class="small-6 columns text-center">
 	<p>1993 River Rd West Wasaga Beach, On L9z 2W1

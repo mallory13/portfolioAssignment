@@ -17,8 +17,13 @@ body{
 
 
 img{
-	height: 100px;
-	width: 100px;	
+	height: 200px;
+	width: 200px;	
+}
+
+#logo{
+	height: 50px;
+	width: 100px;
 }
 
 h1{
@@ -33,6 +38,7 @@ h3{
 	text-align:center;
 	font-weight:bold;
 	font-size:3em;
+	color: white;
 }
 
 header{
@@ -54,6 +60,10 @@ nav{
 #price_business{
 	background-color:#72EAE8;
 	background-size:cover;
+	margin: 20px;
+	padding: 20px;
+	padding-right:30px;
+	height: 90%;
 }
 
 #price_wedding{
@@ -84,15 +94,16 @@ nav{
 	text-align:center;
 }
 
-#parallax{
+.parallax{
 	background-image: ;
-	
   	text-indent: -9999px;
   	background-attachment: fixed;
   	background-position: center center;
   	background-size: cover;
   	&:nth-child(2n) {
     box-shadow: inset 0 0 1em #111;
+	font-weight:300;
+	color: white;
 }
 
 #map_canvas {
